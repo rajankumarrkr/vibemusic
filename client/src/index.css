@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a0a0a;
+  --color-secondary: #1a1a1a;
+  --color-accent-purple: #9d4edd;
+  --color-accent-gold: #ffaa00;
+  --color-accent-pink: #ff007f;
+}
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --accent-purple: #9d4edd;
+  --accent-gold: #ffaa00;
+}
+
+body {
+  @apply bg-primary text-gray-100 font-sans antialiased;
+  background-color: var(--bg-primary);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-xl;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, var(--accent-purple), #5a189a);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--accent-gold), #ff8800);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* Smooth transitions */
+.page-transition {
+  transition: all 0.3s ease-in-out;
+}
